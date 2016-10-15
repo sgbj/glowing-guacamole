@@ -49,11 +49,13 @@
       "Views",
       "Areas/**/Views",
       "appsettings.json",
-      "web.config"
+      "web.config",
+      "node_modules"
     ]
   },
 
   "scripts": {
+    "prepublish": [ "npm install" ],
     "postpublish": [ "dotnet publish-iis --publish-folder %publish:OutputPath% --framework %publish:FullTargetFramework%" ]
   }
 }
